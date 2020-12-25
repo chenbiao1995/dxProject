@@ -33,7 +33,7 @@ public class IndexController {
 	}
 
 
-	@ApiOperation(value="版本信息", notes="测试版本信息")
+	@ApiOperation(value="测试版本信息", notes="测试版本信息")
 	@ApiImplicitParams({
 		@ApiImplicitParam(paramType = "query", name = "version", value = "版本", required = true, dataType = "String")
 	})
