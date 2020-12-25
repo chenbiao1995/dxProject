@@ -35,7 +35,7 @@ public class IndexController {
 
 	@ApiOperation(value="测试版本信息", notes="测试版本信息")
 	@ApiImplicitParams({
-		@ApiImplicitParam(paramType = "query", name = "version", value = "版本", required = false, dataType = "String")
+		@ApiImplicitParam(paramType = "query", name = "version", value = "版本", required = true, dataType = "String")
 	})
 	@PostMapping("/getVersion")
 	@ResponseBody
