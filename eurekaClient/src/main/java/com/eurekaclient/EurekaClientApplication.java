@@ -1,8 +1,8 @@
-package com.eureka;
+package com.eurekaclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @ClassName: EurekaApplication
@@ -11,12 +11,12 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @Date: 2020/12/26 23:27
  * @Version: 1.0
  */
-@EnableEurekaServer
 @SpringBootApplication
-public class EurekaApplication {
+@EnableEurekaClient
+public class EurekaClientApplication {
 	public static void main(String[] args) {
 		try {
-			SpringApplication.run(EurekaApplication.class, args);
+			SpringApplication.run(EurekaClientApplication.class, args);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,5 +1,7 @@
 package com.project.dx.entity;
 
+import com.project.dx.util.Test;
+
 /**
  * @ClassName: User
  * @Author: chenbiao
