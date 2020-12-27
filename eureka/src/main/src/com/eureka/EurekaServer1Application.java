@@ -2,6 +2,7 @@ package com.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
@@ -13,10 +14,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @EnableEurekaServer
 @SpringBootApplication
-public class EurekaApplication {
+@EnableDiscoveryClient
+public class EurekaServer1Application {
 	public static void main(String[] args) {
 		try {
-			SpringApplication.run(EurekaApplication.class, args);
+			SpringApplication.run(EurekaServer1Application.class, args);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
