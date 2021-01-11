@@ -5,6 +5,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import src.com.entity.CommonResult;
@@ -36,6 +37,19 @@ public class IndexController {
 		objectCommonResult.setData(port);
 		objectCommonResult.setMessage("messageTest");
 		return  objectCommonResult;
+	}
+
+	@RequestMapping("/okMethod")
+	@ResponseBody
+	public String okMethod(String id){
+		return "正常请求:id:" + id;
+	}
+
+	@RequestMapping("/timeOutMethod")
+	@ResponseBody
+	public String timeOutMethod(String id) throws Exception{
+		Thread.sleep(5000);
+		return "timeOutMethod" + id;
 	}
 
 	@RequestMapping("/getDiscoveryClient")
