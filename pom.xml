@@ -9,6 +9,7 @@
         <module>eurekaClient</module>
         <module>eurekaSever2</module>
         <module>eurekaClient2</module>
+        <module>hystrixDashboard</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
